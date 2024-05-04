@@ -1,7 +1,11 @@
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
-# Create your views here.
+class homePageview(TemplateView):
+    template_name = "home.html"
 
-def homePageview(request):
-    return HttpResponse("Hello this my page/")
+class aboutPageview(TemplateView):
+    template_name = "about.html"
 
+
+class contactPageview(TemplateView):
+    template_name = "contact.html"
